@@ -1,10 +1,20 @@
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Features/VideoChatting/Components/Home';
+import VideoChating from './Features/VideoChatting/Components/VideoChating';
+import Games from './Features/VideoChatting/Components/Games';
+import Test from './Features/VideoChatting/Components/Test';
 function App() {
-
-
   return (
-    <h1 className="bg-gray-500 text-3xl text-red-400">hello this is the omg app</h1>
-  )
+    <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/videochat" element={<VideoChating/>} />
+      <Route path="/Games" element={<Games/>} />
+      <Route path="/test" element={<Test/>} />
+        </Routes>
+    </BrowserRouter>
+
+  );
 }
 
 export default App
